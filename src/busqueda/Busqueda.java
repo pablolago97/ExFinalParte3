@@ -1,17 +1,13 @@
 package busqueda;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Busqueda {
 
     public static void main(String[] args) {
         //EJECUCION
-        Scanner obx = new Scanner(System.in);
-        int x,y;
-        System.out.print("Introduzca número de elementos del array: ");
-        x = obx.nextInt();
-        System.out.print("Introduzca número del que queremos averiguar el índice: ");
-        y = obx.nextInt();
+        int x = Integer.parseInt(JOptionPane.showInputDialog("Introduce la longitud del array:"));
+        int y = Integer.parseInt(JOptionPane.showInputDialog("Introduce el número del que quieres averiguar el índice"));
         int[] numeros = new int[x];
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = i * 5;
@@ -19,6 +15,7 @@ public class Busqueda {
         }
         Busqueda ejemplo = new Busqueda();
         int indice = ejemplo.busquedaBinaria(numeros, y, 0, numeros.length - 1);
+        JOptionPane.showMessageDialog(null, "El indice del valor"+"'"+y+"'"+ "es: " + indice);
         System.out.println("El indice del valor"+" '"+y+"'"+" es: " + indice);
     }
         //METODO
