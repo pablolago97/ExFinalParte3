@@ -7,6 +7,7 @@ public class Busqueda {
         int[] numeros = new int[100];
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = i * 5;
+            
         }
         Busqueda ejemplo = new Busqueda();
         int indice = ejemplo.busquedaBinaria(numeros, 450, 0, numeros.length - 1);
